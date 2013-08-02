@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="My Project" default="build">
     <property environment="env"/>
+    <property name="env.PATH" value="${PATH}:/usr/local/bin"/>
     
     <target name="init" description="Create build folder and subfolders if required">
         <echo message="Creating Directories..." />
