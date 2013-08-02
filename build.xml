@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="My Project" default="build">
+    <property environment="env"/>
+    
     <target name="init" description="Create build folder and subfolders if required">
         <echo message="Creating Directories..." />
         <mkdir dir="build"/>
@@ -27,6 +29,7 @@
             <arg value="install" />
         </exec>
         <echo message="Running the tests ..." />
+        <echo message="${env.PATH}" />
     <exec executable="/usr/local/bin/mocha"  output="build/test_results/mocha.xml" failonerror="true">
         <env key="NODE_PATH" value="/tmp/node_modules/" />
             <arg value="--reporter" />
