@@ -25,13 +25,13 @@
 
     <target name="mocha-jenkins" description="Test framework">
         <echo message="Installing Deps ..." />
-        <exec executable="/usr/local/bin/npm" failonerror="true">
+        <exec executable="npm" failonerror="true">
         <env key="NODE_PATH" value="/tmp/node_modules/" />
             <arg value="install" />
         </exec>
         <echo message="Running the tests ..." />
         <echo message="${env.PATH}" />
-    <exec executable="/usr/local/bin/mocha"  output="build/test_results/mocha.xml" failonerror="true">
+    <exec executable="mochaasdasd"  output="build/test_results/mocha.xml" failonerror="true">
         <env key="NODE_PATH" value="/tmp/node_modules/" />
             <arg value="--reporter" />
             <arg value="xunit" />
